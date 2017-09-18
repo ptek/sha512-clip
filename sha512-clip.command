@@ -31,6 +31,7 @@ calculateSha512 t = do
 errorMissingInput :: IO Text
 errorMissingInput = do
   stderr (return "Sorry, clipboard contains no usable text.")
+  sleep 5.0
   exit (ExitFailure 1)
 
 printAndWriteClipboard :: Text -> IO ()
